@@ -1,0 +1,22 @@
+/* Back button, call button in the header and social icons in the footer. */
+.back-bar{padding-top:26px}
+.back-button{display:inline-flex;align-items:center;gap:8px;padding:8px 18px 8px 12px;border:1.5px solid #21232833;border-radius:999px;background:var(--paper);color:var(--ink);font-weight:600;font-size:.9rem;line-height:1.2;text-decoration:none;transition:border-color .18s,color .18s,transform .18s}
+.back-button svg{width:18px;height:18px;flex:none;transition:transform .18s}
+.back-button:hover{border-color:var(--red);color:var(--red)}.back-button:hover svg{transform:translateX(-3px)}
+.back-bar+.page-hero{padding-top:40px}.back-bar+.about-hero{padding-top:36px}.back-bar+#korte-keten{padding-top:36px}
+.back-bar+.producer-hero{padding-top:30px}.back-bar+.not-found{min-height:55vh}
+
+.call-cta{gap:8px}.call-cta svg{width:17px;height:17px;flex:none}
+
+.social-links{list-style:none;display:flex;gap:12px;padding:0;margin:4px 0 0}
+.social-links a{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;border:1.5px solid rgb(255 255 255/.28);color:#e8e4dc;transition:background-color .18s,border-color .18s,color .18s,transform .18s}
+.social-links a:hover{background:#ef705c;border-color:#ef705c;color:#fff;transform:translateY(-2px)}
+.social-links svg{width:20px;height:20px}
+
+@media(max-width:900px){
+ .desktop-cta.call-cta{display:inline-flex;width:44px;height:44px;padding:0;border-radius:50%}
+ .call-cta span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+ .call-cta svg{width:20px;height:20px}
+ .nav-wrap{gap:12px}
+}
+@media(max-width:650px){.back-bar{padding-top:18px}.back-bar+.page-hero{padding-top:30px}}

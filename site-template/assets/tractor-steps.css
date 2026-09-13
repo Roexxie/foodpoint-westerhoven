@@ -1,0 +1,12 @@
+#korte-keten{scroll-margin-top:90px;padding-bottom:40px}
+#korte-keten ol>li{animation:none;background:transparent;box-shadow:none;border-radius:0}
+.shopping-intro{padding-top:24px;padding-bottom:24px;border-bottom:0}
+.shopping-intro+.steps{margin-top:12px}
+/* Mobile: draw the road once across steps 1-2 (instead of one piece per step), so the second piece can't cover the first tractor.
+   The per-step spans stay as invisible tracks for the tractor animations. */
+@media (max-width:47.999rem){
+ #korte-keten ol::before{content:'';position:absolute;grid-column:1;grid-row:1/3;left:11px;width:1rem;top:.75rem;bottom:calc(-2.5rem - .75rem);border-radius:999px;background:repeating-linear-gradient(to bottom,var(--color-cream) 0 11px,transparent 11px 25px) center .75rem/2px calc(100% - 1.5rem) no-repeat,var(--color-ink)}
+ #korte-keten ol>li>span[aria-hidden]{background:transparent}
+ #korte-keten ol>li>span[aria-hidden]>span{display:none}
+ #korte-keten .route-leg{z-index:1}
+}

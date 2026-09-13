@@ -1,0 +1,9 @@
+
+/* Render photographs in their native proportions without upscaling. */
+img{max-width:100%;height:auto}
+.hero-image img,.story-image img,.about-hero img,.map-card img,.producer-preview img,.producer-logo img{
+ width:100%;max-width:var(--image-width,100%);height:auto;min-height:0;max-height:none;aspect-ratio:auto;object-fit:contain;
+}
+.story-image{display:flex;align-items:center;justify-content:center;min-width:0}
+.hero-image,.about-hero,.map-card{min-width:0}
+.producer-stamp{max-width:280px;margin-inline:auto}
